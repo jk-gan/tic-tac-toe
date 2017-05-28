@@ -4,5 +4,5 @@ This is a Tic Tac Toe game using Minimax Algorithm. I enhance the algorithm usin
 
 # How to use it
 ```bash
-bundle exec ruby lib/tic_tac_toe.rb
+ruby lib/tic_tac_toe/play.rb
 ```

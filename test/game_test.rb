@@ -2,10 +2,10 @@ require "test_helper"
 
 class GameTest < Minitest::Test
   def setup
-    @board = Board.new
+    @board = TicTacToe::Board.new
     @players = []
-    @players << Player.new('JK', 'X', role[:human])
-    @players << Player.new('Bot', 'O', role[:bot])
+    @players << TicTacToe::Player.new('JK', 'X', role[:human])
+    @players << TicTacToe::Player.new('Bot', 'O', role[:bot])
   end
 
   def test_welcome_msg
