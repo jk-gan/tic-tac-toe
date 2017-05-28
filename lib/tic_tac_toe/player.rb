@@ -1,14 +1,13 @@
 module TicTacToe
   class Player
-    attr_reader :name, :code
-    attr_accessor :score
+    attr_reader :name, :score
+    attr_accessor :code
 
-    def initialize(name, code, human)
+    def initialize(name, human)
       @name = name
       @score = 0
-      @code = code
       @human = human
-      puts "Player #{name} (#{score}) is added using #{code}"
+      puts "Player #{name} is added"
     end
 
     def select_cell

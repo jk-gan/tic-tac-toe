@@ -24,7 +24,26 @@ module TicTacToe
     def initialize(board, players)
       @board = board
       @players = players
-      @current_player = players[0]
+    end
+
+    def choose_position
+      puts 'Choose who will be first:'
+      puts '1. You'
+      puts '2. Bot'
+
+      choice = gets.strip.to_i
+      if choice == 1
+        @players[0].code = 'X'
+        @players[1].code = 'O'
+        @current_player = @players[0]
+      elsif choice == 2
+        @players[0].code = 'O'
+        @players[1].code = 'X'
+        swicth_player
+      else
+        puts 'Invalid input'
+        choose_position
+      end
     end
 
     def start

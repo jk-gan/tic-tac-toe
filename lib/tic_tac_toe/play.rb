@@ -8,11 +8,13 @@ players = []
 
 board = TicTacToe::Board.new
 
-players << TicTacToe::Player.new('JK', 'X', role[:human])
-players << TicTacToe::Player.new('Bot', 'O', role[:bot])
+players << TicTacToe::Player.new('JK', role[:human])
+players << TicTacToe::Player.new('Bot', role[:bot])
 
 game = TicTacToe::Game.new(board, players)
 
+puts ''
+game.choose_position
 puts ''
 game.start
 puts ''
