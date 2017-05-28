@@ -11,12 +11,6 @@ module TicTacToe
       puts "Player #{name} (#{score}) is added using #{code}"
     end
 
-    def select(index, board)
-      if board[index]
-
-      end
-    end
-
     def select_cell
       gets.strip.to_i
     end
