@@ -5,19 +5,22 @@ module TicTacToe
     WIDTH = 3
     HEIGHT = 3
 
+    attr_accessor :cells
+
     def initialize
+      @cells = []
       @board = Array.new(HEIGHT){ Array.new(WIDTH) }
-      3.times do |i|
-        3.times do |j|
-          @board[i][j] = Cell.new('-')
+      WIDTH.times do |i|
+        HEIGHT.times do |j|
+          @cells << @board[i][j] = Cell.new('-')
         end
       end
     end
 
     def print_board
-      3.times do |i|
+      WIDTH.times do |i|
         print '       '
-        3.times do |j|
+        HEIGHT.times do |j|
           print j != 2 ? " #{@board[i][j].value} |" : " #{@board[i][j].value} "
         end
         puts ''
@@ -30,6 +33,10 @@ module TicTacToe
       #  ---+---+---
       #   - | - | -
       # EOB
+    end
+
+    def mark_by(player, move)
+      @cells[move].value = player.code
     end
   end
 end

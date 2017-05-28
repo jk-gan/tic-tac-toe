@@ -17,6 +17,10 @@ module TicTacToe
       end
     end
 
+    def select_cell
+      gets.strip.to_i
+    end
+
     def is_human?
       @human
     end

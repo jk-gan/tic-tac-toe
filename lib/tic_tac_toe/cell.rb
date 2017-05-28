@@ -4,5 +4,9 @@ module TicTacToe
     def initialize(value = '')
       @value = value
     end
+
+    def available?
+      value == '-'
+    end
   end
 end
